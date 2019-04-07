@@ -1,0 +1,20 @@
+GBDT(Gradient Boosting Decision Tree)
+看完诸位大牛的博客，还是云里雾里，暂且做个笔记，以待日后回顾再修正。
+GBDT主要由三个概念组成：Regression Decistion Tree（回归树,RDT)，Gradient Boosting（梯度下降,GB)，Shrinkage(分支)
+
+GBDT本质是回归树拟合的残差之和，每颗回归树均方差尽量小。
+
+没看到GB的应用，存疑。
+
+Shrinkage是给每颗回归树，加了一个可信度(step, 0.001~0.01),
+
+GBDT使用了CART回归决策树，所以sklearn参数与之相似。
+
+学习能力和时间有限，总结得很有限。
+
+
+参考资料：
+<a href='https://www.cnblogs.com/peizhe123/p/5086128.html'>GBDT详解</a>
+<a href='https://www.cnblogs.com/pinard/p/6140514.html'>scikit-learn 梯度提升树(GBDT)原理小结</a>
+<a href='https://www.cnblogs.com/DjangoBlog/p/6201663.html'>scikit-learn 梯度提升树(GBDT)调参小结</a>
+
