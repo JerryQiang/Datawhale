@@ -1,0 +1,14 @@
+@所有人
+Task1（3天）
+1.1 学习get与post请求
+学习get与post请求，尝试使用requests或者是urllib用get方法向https://www.baidu.com/发出一个请求，并将其返回结果输出。
+如果是断开了网络，再发出申请，结果又是什么。了解申请返回的状态码。
+了解什么是请求头，如何添加请求头。
+1.2 正则表达式
+学习什么是正则表达式并尝试一些正则表达式并进行匹配。
+然后结合requests、re两者的内容爬取https://movie.douban.com/top250里的内容
+要求抓取名次、影片名称、年份、导演等字段。
+参考资料： https://desmonday.github.io/2019/03/02/python爬虫学习-day2正则表达式/
+------------
+4月7日22:00前进入石墨文档提交打卡链接
+https://shimo.im/docs/xu8br1UG1X8QDbuK/ 《爬虫任务一打卡》，可复制链接后用石墨文档 App 或小程序打开
