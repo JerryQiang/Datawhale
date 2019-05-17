@@ -1,0 +1,16 @@
+Task2（2天）
+2.1 学习beautifulsoup
+学习beautifulsoup，并使用beautifulsoup提取内容。
+使用beautifulsoup提取丁香园论坛的回复内容。
+丁香园直通点：http://www.dxy.cn/bbs/thread/626626#626626 。
+参考资料：https://blog.csdn.net/wwq114/article/details/88085875
+2.2 Task4 学习xpath 
+学习xpath，使用lxml+xpath提取内容。
+使用xpath提取丁香园论坛的回复内容。
+丁香园直通点：http://www.dxy.cn/bbs/thread/626626#626626 。
+参考资料：https://blog.csdn.net/naonao77/article/details/88129994
+------------
+4月9日22:00前进入石墨文档提交打卡链接
+https://shimo.im/docs/UACKf8Y1XOIVCYc3 《爬虫任务二打卡》
+------------
+诸位觉得自己的总结写的不错的，也可以去自荐一下。优秀作业会有奖励的哦。

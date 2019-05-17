@@ -1,0 +1,18 @@
+@所有人
+Task3（2天）
+3.1 Task5  安装selenium并学习
+安装selenium并学习。
+使用selenium模拟登陆163邮箱。
+163邮箱直通点：https://mail.163.com/ 。
+参考资料：https://blog.csdn.net/weixin_42937385/article/details/88150379
+ 
+3.2 Task6 学习IP相关知识
+学习什么是IP，为什么会出现IP被封，如何应对IP被封的问题。
+抓取西刺代理，并构建自己的代理池。
+ 西刺直通点：https://www.xicidaili.com/ 。
+参考资料：https://blog.csdn.net/weixin_43720396/article/details/88218204
+------------
+4月11日22:00前进入石墨文档提交打卡链接
+https://shimo.im/docs/l0rSJfSfLQAi9qu9
+------------
+诸位觉得自己的总结写的不错的，也可以去自荐一下。优秀作业会有奖励的哦。
