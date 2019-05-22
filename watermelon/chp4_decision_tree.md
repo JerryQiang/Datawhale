@@ -106,7 +106,7 @@ $$
 \operatorname{Gini\_index}(D, a)=\sum_{v=1}^{V} \frac{\left|D^{v}\right|}{|D|} \operatorname{Gini}\left(D^{v}\right)
 $$
 $$
-a_{*}=\underset{a \in A}{\arg \min } \text { Gini_index }(D, a)
+a_{*}=\underset{a \in A}{\arg \min } \text{ Gini_index }(D, a)
 $$
 $ \operatorname{Gini}(D) $反映了从数据集$D$中随机抽取两个样本，类别不一致的概率.因此选择划分后**基尼指数最小**的属性作为最优划分属性。
 <br/>
