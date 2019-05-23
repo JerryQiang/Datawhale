@@ -14,25 +14,22 @@
 
 一颗决策树包含一个**根结点**、若干个**子结点**和若干个**叶结点**。根结点包含**样本全集**；子结点对应**属性划分**，包含**划分样本**；叶结点对应**决策结果**，包含**决策样本**。从根结点到每个叶结点的路径对应一个**判定测试序列**（系列子决策）。
 
-![决策树基本算法](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/%E8%A5%BF%E7%93%9C%E4%B9%A6/resources/imgs/chp4_decision_tree/decision_tree_basic_algorithm.png)
+![决策树基本算法](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/watermelon/resources/imgs/chp4_decision_tree/decision_tree_basic_algorithm.png)
 
 决策树的生成是一个递归过程。核心是**最优划分属性**的选择，有三种情形导致递归返回。
 
 - (1)当前结点包含的样本全**属于同一类别**，无需划分，该结点类别确定。
 
-- (2)所有样本在所有**属性值相同**，或**属性集为空**，无法划分，该结点类别设定为所含样本最多的类别（利用当前结点的**后验分布**）。
+- (2)所有样本**属性集为空**，或所有**属性值相同**，无法划分，该结点类别设定为所含样本最多的类别（利用当前结点的**后验分布**）。
 
 - (3)当前结点包含的**样本集合为空**，不能划分。父结点类别确定（利用当前结点的**先验分布**）。
 
-注意属性集和样本集合为空，都表示划分样本为空。
 
-$$
-\because 决策树划分最多的情况为每类属性每个属性值有不同类别
-\\ \therefore 属性集划分完，样本集必定划分完。
-\\ 属性集为\varnothing\Rightarrow样本集合为\varnothing
-$$
 
-分别从样本和属性的角度看，为当前结点先验分布和后验分布。
+**注意：**
+出现(2)中**属性集为空**的情形，划分层数为属性个数，且最后一层划分存在冲突数据。
+出现(3)中**样本集为空**的情形，训练数据不满足划分属性值的任意组合。实例为西瓜书p78中图4.4中浅白分支（好瓜）。
+从样本和属性的角度看，分别为当前结点的先验分布和后验分布。
 
  <br/>
 
@@ -106,9 +103,9 @@ $$
 \operatorname{Gini\_index}(D, a)=\sum_{v=1}^{V} \frac{\left|D^{v}\right|}{|D|} \operatorname{Gini}\left(D^{v}\right)
 $$
 $$
-a_{*}=\underset{a \in A}{\arg \min } \text{ Gini_index }(D, a)
+a_{*}=\underset{a \in A}{\arg \min } \operatorname{Gini\_index }(D, a)
 $$
-$ \operatorname{Gini}(D) $反映了从数据集$D$中随机抽取两个样本，类别不一致的概率.因此选择划分后**基尼指数最小**的属性作为最优划分属性。
+$\operatorname{Gini}(D)$反映了从数据集$D$中随机抽取两个样本，类别不一致的概率.因此选择划分后**基尼指数最小**的属性作为最优划分属性。
 <br/>
 
 我们选择**最优划分属性**，目的是让分支结点所包含的样本尽可能属于同一类别，即结点的**纯度**(purity)高。
@@ -263,10 +260,10 @@ $w_x$为**权重值**，默认为1，在属性缺失的样本会同时进入所�
 
 将样本集合对应多维空间，每个属性对应一个维度，分类就是在不同类空间寻找边界。单变量决策树的分类边界是由若干个与坐标轴平行的分段组成。
 
-![决策树对复杂分类边界的分段近似](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/%E8%A5%BF%E7%93%9C%E4%B9%A6/resources/imgs/chp4_decision_tree/piecewise_approximation_of_complex_classification_boundaries.png)
+![决策树对复杂分类边界的分段近似](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/watermelon/resources/imgs/chp4_decision_tree/piecewise_approximation_of_complex_classification_boundaries.png)
 
 多变量决策树的分类边界是由若干个折线分段组成。
-![多变量决策树对应的分类边界](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/%E8%A5%BF%E7%93%9C%E4%B9%A6/resources/imgs/chp4_decision_tree/multivariate_decision_tree__classification_boundaries.png)
+![多变量决策树对应的分类边界](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/watermelon/resources/imgs/chp4_decision_tree/multivariate_decision_tree__classification_boundaries.png)
 
 <br/>
 
@@ -287,7 +284,7 @@ $w_x$为**权重值**，默认为1，在属性缺失的样本会同时进入所�
 
 ### 4.6.2 增量学习
 
-之前在林轩田老师的机器学习基石中<a/ href="https://blog.csdn.net/the_harder_to_love/article/details/89397352">第三讲：学习的类型</a>中基于**样本学习的方式**分类，**逐步**接受部分数据的是**online learning**（被动学习）。
+之前在林轩田老师的机器学习基石中<a href="https://blog.csdn.net/the_harder_to_love/article/details/89397352">第三讲：学习的类型</a>中基于**样本学习的方式**分类，**逐步**接受部分数据的是**online learning**（被动学习）。
 
 也是这里提到的**增量学习**(Incremental Learning)，即在接收到新样本后可对已学到的模型进行调整，而不用完全重新学习。
 
