@@ -7,7 +7,7 @@
 
 &emsp;&emsp;**Pycharm**中，我运行一段Pandas代码，报**import matplotlib RuntimeError: implement_array_function method already has a docstring**。
 
-![RuntimeError:pandas implement_array_function](https://raw.githubusercontent.com/JerryQiang/MachineLearningFoundations/master/res/imgs/RuntimeError_array/RuntimeError_pandas_implement_array_function.png)
+![RuntimeError:pandas implement_array_function](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/python_dev_env/res/imgs/RuntimeError_array/RuntimeError_pandas_implement_array_function.png)
 
 
 
@@ -25,7 +25,7 @@
 
 运行测试安装的matplotlib，报**import pandas RuntimeError: implement_array_function method already has a docstring**。
 
-![RuntimeError:matplotlib implement_array_function](https://raw.githubusercontent.com/JerryQiang/MachineLearningFoundations/master/res/imgs/RuntimeError_array/RuntimeError_pandas_implement_array_function.png)
+![RuntimeError:matplotlib implement_array_function](https://raw.githubusercontent.com/JerryQiang/Datawhale/master/python_dev_env/res/imgs/RuntimeError_array/RuntimeError_pandas_implement_array_function.png)
 
 
 &emsp;&emsp;推测matplotlib与之前安装的numpy，pandas不兼容。
